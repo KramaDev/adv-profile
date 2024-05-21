@@ -1,0 +1,207 @@
+@keyframes blob-animation {
+  0% {
+    border-radius: 40% 20% 70% 40% / 30% 60% 50% 40%;
+  }
+  50% {
+    border-radius: 30% 60% 20% 50% / 30% 30% 40% 60%;
+  }
+  100% {
+    border-radius: 20% 50% 60% 20% / 30% 50% 20% 60%;
+  }
+}
+
+@keyframes shake {
+  0% {
+    transform: translateY(0.25rem);
+  }
+  50% {
+    transform: translateY(0rem);
+  }
+  100% {
+    transform: translateY(-0.25rem);
+  }
+}
+
+.article {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  height: 60vh;
+  gap: 2rem;
+  margin-bottom: 2rem;
+
+  @media only screen and (max-width: 768px) {
+    flex-direction: column-reverse;
+  }
+  @media only screen and (max-width: 576px) {
+    flex-direction: column-reverse;
+  }
+
+  &__left {
+    padding: 1rem;
+    &__txt {
+      font-size: 2rem;
+      margin: 0.5rem;
+      font-weight: 800;
+
+      @media only screen and (max-width: 768px) {
+        font-size: 1.5rem;
+      }
+
+      @media only screen and (max-width: 576px) {
+        font-size: 1rem;
+      }
+
+      & .highlight {
+        color: var(--color-blue-300);
+      }
+
+      &--lg {
+        font-size: 4rem;
+
+        @media only screen and (max-width: 768px) {
+          font-size: 3rem;
+        }
+        @media only screen and (max-width: 576px) {
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+
+  &__right {
+    padding: 1rem;
+    .blob {
+      width: 20rem;
+      height: 20rem;
+      object-fit: cover;
+      border-radius: 50%;
+      box-shadow: 1px 1px 2rem var(--color-blue-200);
+      animation: blob-animation 5s cubic-bezier(0.42, 0, 0.58, 1) infinite
+        alternate;
+      background-color: var(--color-blue-200);
+      padding: 0.25rem;
+    }
+  }
+
+  &__href {
+    width: 15%;
+    text-align: center;
+    font-weight: 600;
+    font-size: 0.75rem;
+
+    margin-top: 0.5rem;
+    padding: 0.25rem 0.5rem;
+    border: 1px solid var(--color-black);
+    border-radius: var(--border-round);
+
+    background-color: var(--color-blue-300);
+    color: var(--color-white);
+    transition: all 100ms ease-in-out;
+    cursor: pointer;
+    &:hover {
+      scale: 0.95;
+      background-color: var(--color-blue-200);
+    }
+
+    @media only screen and (max-width: 768px) {
+      font-size: 0.5rem;
+    }
+    @media only screen and (max-width: 576px) {
+      font-size: 0.3rem;
+    }
+  }
+}
+
+.bar-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 2rem;
+  padding: 1rem;
+  margin-bottom: 50vh;
+
+  @media only screen and (max-width: 768px) {
+    gap: 0.5rem;
+  }
+
+  @media only screen and (max-width: 576px) {
+    gap: 0.5rem;
+    flex-direction: column;
+  }
+
+  & .icn {
+    width: 3rem;
+    height: 3rem;
+    padding: 0.05rem;
+    animation: shake 1s ease-in-out infinite alternate;
+    transition: all 250ms ease-in-out;
+    cursor: pointer;
+    &:hover {
+      scale: 1.2;
+    }
+  }
+}
+
+.contact-me {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 2rem;
+  width: 100%;
+
+  &__txt {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+  }
+
+  &__href {
+    font-size: 2rem;
+    text-decoration: none;
+    color: var(--color-white);
+    &:hover {
+      text-decoration: line-through;
+      color: var(--color-blue-300);
+    }
+  }
+}
+
+.socials-bar {
+  text-align: center;
+  background-color: var(--color-blue-200);
+  box-shadow: 0px -0.5rem 1rem 0.5rem var(--color-blue-200);
+  width: 100%;
+
+  &__text {
+    margin: 0;
+    padding: 0.25rem;
+
+    &--lg {
+      font-size: 2rem;
+    }
+  }
+
+  &__body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 0.5rem;
+    padding: 1rem;
+  }
+
+  .icn {
+    width: 4rem;
+    height: 4rem;
+    padding: 0.25rem;
+    transition: all 250ms ease-in-out;
+    cursor: pointer;
+    &:hover {
+      scale: 0.95;
+      opacity: 0.7;
+    }
+  }
+}

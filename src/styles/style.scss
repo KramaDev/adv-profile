@@ -1,0 +1,40 @@
+:root {
+  --color-black: #222;
+  --color-white: #e7e7e7;
+  --color-gray: #414141;
+  --color-grayish: #7f8c8d;
+
+  --color-red: #b33939;
+  --color-blue: #3498db;
+  --color-orange: #ff793f;
+  --color-green: #34ad0f;
+
+  --color-blue-100: #81ecec;
+  --color-blue-200: #74b9ff;
+  --color-blue-300: #0984e3;
+  --color-blue-400: #6c5ce7;
+  --color-blue-500: #273c75;
+  --color-blue-600: #192a56;
+
+  --border-round: 1rem;
+  --border-circle: 1600rem;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+//IMPORTS
+//COMPONENTS A-Z
+@import "./components/calculator.scss";
+@import "./components/contact.scss";
+@import "./components/header.scss";
+@import "./components/home.scss";
+@import "./components/layout.scss";
+@import "./components/nav.scss";
+@import "./components/section.scss";

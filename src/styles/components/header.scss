@@ -1,0 +1,35 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 100%;
+  padding: 0 4rem;
+  margin-bottom: 2rem;
+  position: relative;
+
+  @media only screen and (max-width: 768px) {
+    padding: 0 1rem;
+  }
+  @media only screen and (max-width: 576px) {
+    padding: 0 1rem;
+  }
+
+  &__text {
+    font-weight: 600;
+    font-size: 2rem;
+    padding: 0.25rem;
+    transition: all 250ms ease-in-out;
+
+    @media only screen and (max-width: 768px) {
+      font-size: 1rem;
+    }
+    @media only screen and (max-width: 576px) {
+      font-size: 1rem;
+    }
+  }
+
+  &:hover::after {
+    display: block;
+  }
+}
